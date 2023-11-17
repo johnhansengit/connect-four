@@ -39,7 +39,8 @@ function init() {
         [0, 0, 0, 0, 0, 0], // col 5
         [0, 0, 0, 0, 0, 0], // col 6
     ]
-    turn = 1;
+    // Randonmize which player goes first
+    turn = Math.random() < 0.5? -1 : 1;
     winner = null;
     render();
 }
@@ -161,7 +162,6 @@ function renderControls() {
 }
 
 /* TO DO
-    - Randomize which player gets to go first
     - Tweak message formatting
     - Try to 'animate' (blink through) disks falling from markers?
 */
